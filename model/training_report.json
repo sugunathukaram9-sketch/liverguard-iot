@@ -1,0 +1,85 @@
+{
+  "dataset": "Indian Liver Patient Records (ILPD) - Kaggle uciml/indian-liver-patient-records",
+  "n_records": 583,
+  "n_features": 13,
+  "feature_columns": [
+    "Age",
+    "Gender_Male",
+    "Total_Bilirubin",
+    "Direct_Bilirubin",
+    "Alkaline_Phosphotase",
+    "Alamine_Aminotransferase",
+    "Aspartate_Aminotransferase",
+    "Total_Protiens",
+    "Albumin",
+    "Albumin_and_Globulin_Ratio",
+    "Bilirubin_Ratio",
+    "AST_ALT_Ratio",
+    "Protein_Albumin_Diff"
+  ],
+  "cv_results": {
+    "Logistic Regression": {
+      "cv_accuracy": 0.6247126436781609,
+      "cv_auc": 0.7277296466973886
+    },
+    "Random Forest": {
+      "cv_accuracy": 0.7116509926854754,
+      "cv_auc": 0.6823041474654378
+    },
+    "Gradient Boosting": {
+      "cv_accuracy": 0.6751044932079415,
+      "cv_auc": 0.6400593958013313
+    },
+    "XGBoost": {
+      "cv_accuracy": 0.6864942528735632,
+      "cv_auc": 0.6532186379928315
+    },
+    "SVM (RBF)": {
+      "cv_accuracy": 0.6086468129571578,
+      "cv_auc": 0.705753200204813
+    },
+    "KNN": {
+      "cv_accuracy": 0.6772727272727272,
+      "cv_auc": 0.642773169482847
+    }
+  },
+  "final_results": [
+    {
+      "model": "Best single (tuned)",
+      "accuracy": 0.7123287671232876,
+      "precision": 0.8974358974358975,
+      "recall": 0.6730769230769231,
+      "f1": 0.7692307692307693,
+      "auc": 0.7980769230769231,
+      "confusion_matrix": [
+        [
+          34,
+          8
+        ],
+        [
+          34,
+          70
+        ]
+      ]
+    },
+    {
+      "model": "Ensemble",
+      "accuracy": 0.7328767123287672,
+      "precision": 0.76,
+      "recall": 0.9134615384615384,
+      "f1": 0.8296943231441049,
+      "auc": 0.8125,
+      "confusion_matrix": [
+        [
+          12,
+          30
+        ],
+        [
+          9,
+          95
+        ]
+      ]
+    }
+  ],
+  "deployed_model": "Ensemble"
+}
